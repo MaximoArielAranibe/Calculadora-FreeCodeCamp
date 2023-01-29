@@ -2,20 +2,27 @@ import React from "react";
 import '../styles/Button.css'
 
 function Button(props) {
-
 	const isOperator = valor => {
-		return isNaN(valor) && (valor !== '.' && (valor !== '='))
+		return isNaN(valor) && (valor !== '.') && (valor !== '=');
+	};
+	
+	if (isOperator(props.children)) {
+		return (
+			<button
+				className='button-container operator'
+				onClick={() => props.managerClick(props.children)}>
+					{props.children}
+			</button>
+		);
+	} else {
+		return (
+			<button
+				className='button-container'
+				onClick={() => props.managerClick(props.children)}>
+					{props.children}
+				</button>
+		)
 	}
-
-	return (
-		<div
-			className={`button-container 			${isOperator(props.children) ?
-				'operator' :
-				null}`.trimEnd()}
-			onClick={() => props.managerClick(props.children)} >
-			{props.children}
-		</div >
-	)
 }
 
 export default Button;

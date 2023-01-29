@@ -1,10 +1,10 @@
 import './App.css';
-import freeCodeCampLogo from './images/freecodecamp-logo.png'
 import Button from './components/Button.js'
 import InputScreen from './components/InputScreen';
 import ButtonClear from './components/ButtonClear';
 import { useState } from 'react';
 import { evaluate } from 'mathjs'
+import LogoFreeCodeCamp from './components/LogoFreeCodeCamp';
 
 function App() {
 
@@ -15,18 +15,18 @@ function App() {
   };
 
   const calculateResult = () => {
-    setInput(evaluate(input))
-  }
+    if (input) {
+      setInput(evaluate(input))
+    } else {
+      alert("Please enter the values to make the calculations")
+    }
+  };
 
 
   return (
     <div className='App'>
-      <div className='freecodecamp-logo-container'>
-        <img
-          src={freeCodeCampLogo}
-          className='freecodecamp-logo'
-          alt='Logo from freeCodecamp' />
-      </div>
+
+      <LogoFreeCodeCamp />
 
       <div className='container-calculator'>
         <InputScreen input={input} />
@@ -57,7 +57,7 @@ function App() {
           <Button managerClick={addInput}>.</Button>
           <Button managerClick={addInput}>/</Button>
         </div>
-        
+
         <div className='file'>
           <ButtonClear managerClear={() => setInput('')}>Clear</ButtonClear>
         </div>

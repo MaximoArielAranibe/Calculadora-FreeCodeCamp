@@ -5,6 +5,6 @@ const ButtonClear = (props) => (
     <div className="button-clear" onClick={props.managerClear}>
         {props.children}
     </div>
-)
+);
 
 export default ButtonClear
