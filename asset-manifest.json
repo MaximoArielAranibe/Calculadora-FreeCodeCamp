@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Calculadora-FreeCodeCamp/static/css/main.bcfde11a.css",
+    "main.js": "/Calculadora-FreeCodeCamp/static/js/main.54f3decc.js",
+    "static/media/freecodecamp-logo.png": "/Calculadora-FreeCodeCamp/static/media/freecodecamp-logo.5486935b905c7949600c.png",
+    "index.html": "/Calculadora-FreeCodeCamp/index.html",
+    "main.bcfde11a.css.map": "/Calculadora-FreeCodeCamp/static/css/main.bcfde11a.css.map",
+    "main.54f3decc.js.map": "/Calculadora-FreeCodeCamp/static/js/main.54f3decc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bcfde11a.css",
+    "static/js/main.54f3decc.js"
+  ]
+}
